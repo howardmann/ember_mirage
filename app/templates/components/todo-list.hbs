@@ -3,7 +3,7 @@
 <p>checked: {{checkCount}}</p>
 
 <ul>
-  {{#each model as |todo|}}
-    {{todo-item model=todo}}
+  {{#each model as |todo index|}}
+    {{todo-item model=todo todos=itemCount index=index}}
   {{/each}}
 </ul>
