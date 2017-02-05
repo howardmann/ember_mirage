@@ -1,0 +1,11 @@
+{{#if model.showEdit}}
+  {{todo-item-edit model=model}}
+{{else}}
+  <input type="checkbox" onclick={{action "checkItem"}}>
+
+  <span class={{if model.isComplete "complete"}}>
+    {{model.title}}
+  </span>
+  <a href="#" {{action 'deleteItem'}}>Delete</a> |
+  <a href="#" {{action 'showEdit'}}>Edit</a>
+{{/if}}
