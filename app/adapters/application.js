@@ -1,4 +1,5 @@
-import DS from 'ember-data';
+import LSAdapter from 'ember-localstorage-adapter';
 
-export default DS.RESTAdapter.extend({
+export default LSAdapter.extend({
+  namespace: 'howie-burger'
 });

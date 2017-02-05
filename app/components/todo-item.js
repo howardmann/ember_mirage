@@ -7,7 +7,9 @@ export default Ember.Component.extend({
   }),
   actions: {
     checkItem(){
-      this.get('model').toggleProperty('isComplete');
+      let model = this.get('model');
+      model.toggleProperty('isComplete');
+      model.save();
     },
     deleteItem(){
       this.get('model').destroyRecord();
